@@ -1,5 +1,7 @@
-import leftimage from "./assets/1.webp"
+import leftimage from "../assets/1.webp"
+import { useNavigate } from "react-router-dom"
 function SignIn() {
+  const navigate = useNavigate()
   return (
     <div style={{display:"flex",height:"100vh"}}>
 
@@ -50,8 +52,17 @@ function SignIn() {
     <input type="email"placeholder="Email" style={{width:"100%",padding:"10px",margin:"15px 0",borderRadius:"5px",border:"1px solid #ccc"}}/>
     <input type="password" placeholder="Password" style={{width:"100%",padding:"10px",margin:"15px 0",borderRadius:"5px",border:"1px solid #ccc"}}/>
     <button style={{width:"100%",padding:"10px",backgroundColor:"#4A90E2",color:"white",border:"none",borderRadius:"5px",cursor:"pointer"}}>Sign In</button>
-
+ <p style={{ textAlign: "center", marginTop: "16px", fontSize: "14px" }}>
+  Don't have an account?{" "}
+  <span
+    onClick={() => navigate("/register")}
+    style={{ color: "#4b0082", cursor: "pointer", fontWeight: "bold" }}
+  >
+    Register here
+  </span>
+</p>
   </div>
+  
       </div>
 
      
